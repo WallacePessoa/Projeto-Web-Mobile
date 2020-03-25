@@ -43,30 +43,32 @@ public class Player : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Coletavel"))
         {
             FloatScore++;
-            TextScore.text = FloatScore.ToString();
+            TextScore.text = "Score: " + FloatScore.ToString();
             Destroy(collision.gameObject);
         }
 
         if (collision.CompareTag("Animal"))
         {
             FloatScore--;
-            TextScore.text = FloatScore.ToString();
+            TextScore.text = "Score: " + FloatScore.ToString();
             Destroy(collision.gameObject);
         }
 
         if (collision.CompareTag("Tubarão"))
         {
-            rb.AddForce(collision.gameObject.transform.up * ForçaShark);
+            rb.AddForce(transform.position - collision.gameObject.transform.position * ForçaShark);
+            yield return new WaitForSeconds(1f);
+            rb.velocity = Vector2.zero;
         }
 
         if (collision.CompareTag("Baleia"))
         {
-
+            transform.position = new Vector2(Random.Range(-50, 50), Random.Range(-36, 32));
         }
     }
 }

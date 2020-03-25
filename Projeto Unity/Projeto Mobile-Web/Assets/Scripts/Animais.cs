@@ -188,6 +188,18 @@ public class Animais : MonoBehaviour
 
             State = StateMachine.Nadar;
         }
+
+        if (collision.CompareTag("Block"))
+        {
+            transform.up = Vector3.Lerp(transform.up, target - (Vector2)transform.position, 1 * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, target) < 2f)
+                target = new Vector2(Random.Range(-50, 50), Random.Range(-36, 32));
+
+            rb.velocity = transform.up * Speed;
+
+            State = StateMachine.Nadar;
+        }
     }
 
 }

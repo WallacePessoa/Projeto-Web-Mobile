@@ -7,6 +7,7 @@ TagManager:
   - Coletavel
   - Animal
   - "Tubar\xE3o"
+  - Block
   layers:
   - Default
   - TransparentFX
