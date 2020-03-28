@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
 
+    int aux = 0;
+
 
     void Start()
     {
@@ -37,8 +39,12 @@ public class Player : MonoBehaviour
 
         rb.transform.Rotate(new Vector3(0, 0, -hori)* speedRotation);
 
-
-
+        //if(vert == 0 && hori == 0)
+        //{
+        //    rb.velocity = Vector2.zero;
+        //    rb.transform.Rotate(Vector3.Lerp(Vector3.zero, transform.rotation.eulerAngles, 1f * Time.deltaTime));
+        //}
+       
     }
 
 
@@ -61,14 +67,46 @@ public class Player : MonoBehaviour
 
         if (collision.CompareTag("Tubarão"))
         {
+
+
             rb.AddForce(transform.position - collision.gameObject.transform.position * ForçaShark);
-            yield return new WaitForSeconds(1f);
-            rb.velocity = Vector2.zero;
+
+
+            //while(transform.rotation.eulerAngles.z > Vector3.zero.z + 10 || transform.rotation.eulerAngles.z > Vector3.zero.z - 10)
+            //{
+            //    yield return new WaitForSeconds(0.01f);
+            //    rb.transform.Rotate(Vector3.Lerp(Vector3.zero, transform.rotation.eulerAngles, 0.01f * Time.deltaTime));
+
+            //    if (aux > 500)
+            //    {
+            //        print("Parou");
+            //        aux = 0;
+            //        rb.velocity = Vector3.zero;
+                    
+
+            //        break;
+
+            //    }
+
+            //    if(vert != 0)
+            //    {
+            //        rb.velocity = Vector3.zero;
+
+
+            //        break;
+            //    }
+
+   
+            //    aux++;
+            //}
+
         }
 
         if (collision.CompareTag("Baleia"))
         {
             transform.position = new Vector2(Random.Range(-50, 50), Random.Range(-36, 32));
         }
+
+        yield return null;
     }
 }

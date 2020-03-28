@@ -8,6 +8,7 @@ TagManager:
   - Animal
   - "Tubar\xE3o"
   - Block
+  - Baleia
   layers:
   - Default
   - TransparentFX
