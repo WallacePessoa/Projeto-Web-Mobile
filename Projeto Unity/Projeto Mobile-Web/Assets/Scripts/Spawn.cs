@@ -45,7 +45,7 @@ public class Spawn : MonoBehaviour
             PainelDerrota.gameObject.SetActive(true);
         }
 
-        Lixo.text = "Reciclaveis: " + ReciclaveisAtivos.Count.ToString();
+        Lixo.text = "Recicláveis: " + ReciclaveisAtivos.Count.ToString();
 
         foreach(GameObject game in ReciclaveisAtivos)
         {
