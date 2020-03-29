@@ -7,12 +7,17 @@ public class Spawn : MonoBehaviour
 {
     public GameObject[] Animais;
     public GameObject[] Reciclaveis;
-    public Text Lixo;
-
-    public float Contagem;
 
     public List<GameObject> ReciclaveisAtivos = new List<GameObject>();
     public List<GameObject> AnimaisVivos = new List<GameObject>();
+
+    public Text Lixo;
+    public Image PainelVitoria;
+    public Image PainelDerrota;
+    public Button Back;
+
+    public float Contagem;
+
 
     void Start()
     {
@@ -26,6 +31,18 @@ public class Spawn : MonoBehaviour
         if (Contagem < 1)
         {
             StopAllCoroutines();
+        }
+
+        if(AnimaisVivos.Count/4 > ReciclaveisAtivos.Count)
+        {
+            Time.timeScale = 0;
+            PainelVitoria.gameObject.SetActive(true);
+            Back.gameObject.SetActive(true);
+        }else if(AnimaisVivos.Count < ReciclaveisAtivos.Count/4)
+        {
+            Time.timeScale = 0;
+            Back.gameObject.SetActive(true);
+            PainelDerrota.gameObject.SetActive(true);
         }
 
         Lixo.text = "Reciclaveis: " + ReciclaveisAtivos.Count.ToString();
