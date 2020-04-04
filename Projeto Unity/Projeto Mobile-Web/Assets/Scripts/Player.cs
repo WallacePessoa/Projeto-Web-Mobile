@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
 
     public Text TextScore;
+    public Image Painel;
+    public Text TextReturn;
 
 
     public float speed;
@@ -20,12 +22,17 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
 
+    SpriteRenderer sprite;
+
     int aux = 0;
 
+    Vector2 Colisão;
+    bool colidiu = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
 
     }
 
@@ -35,15 +42,21 @@ public class Player : MonoBehaviour
         hori = Input.GetAxis("Horizontal");
         vert = Input.GetAxis("Vertical");
 
-        rb.velocity = transform.up * vert * speed;
+        if(colidiu == true)
+        {
+            //rb.velocity = Colisão.normalized * ForçaShark;
+            rb.AddForce(Colisão.normalized * ForçaShark);
+            if (hori != 0 || vert != 0)
+                colidiu = false;
+        }
+        else
+        {
+            rb.velocity = transform.up * vert * speed;
+        }
 
         rb.transform.Rotate(new Vector3(0, 0, -hori)* speedRotation);
 
-        //if(vert == 0 && hori == 0)
-        //{
-        //    rb.velocity = Vector2.zero;
-        //    rb.transform.Rotate(Vector3.Lerp(Vector3.zero, transform.rotation.eulerAngles, 1f * Time.deltaTime));
-        //}
+
        
     }
 
@@ -67,44 +80,31 @@ public class Player : MonoBehaviour
 
         if (collision.CompareTag("Tubarão"))
         {
+            colidiu = true;
+            Colisão = transform.position - collision.gameObject.transform.position;
 
+            yield return new WaitForSeconds(1f);
+  
+            print(Colisão);
+            
 
-            rb.AddForce(transform.position - collision.gameObject.transform.position * ForçaShark);
-
-
-            //while(transform.rotation.eulerAngles.z > Vector3.zero.z + 10 || transform.rotation.eulerAngles.z > Vector3.zero.z - 10)
-            //{
-            //    yield return new WaitForSeconds(0.01f);
-            //    rb.transform.Rotate(Vector3.Lerp(Vector3.zero, transform.rotation.eulerAngles, 0.01f * Time.deltaTime));
-
-            //    if (aux > 500)
-            //    {
-            //        print("Parou");
-            //        aux = 0;
-            //        rb.velocity = Vector3.zero;
-                    
-
-            //        break;
-
-            //    }
-
-            //    if(vert != 0)
-            //    {
-            //        rb.velocity = Vector3.zero;
-
-
-            //        break;
-            //    }
-
-   
-            //    aux++;
-            //}
 
         }
 
         if (collision.CompareTag("Baleia"))
         {
+            sprite.enabled = !sprite.enabled;
+            Painel.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            TextReturn.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.7f);
             transform.position = new Vector2(Random.Range(-50, 50), Random.Range(-36, 32));
+            sprite.enabled = !sprite.enabled;
+            yield return new WaitForSeconds(0.3f);
+            TextReturn.gameObject.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
+            Painel.gameObject.SetActive(false);
+
         }
 
         yield return null;

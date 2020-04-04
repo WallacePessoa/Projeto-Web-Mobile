@@ -78,15 +78,16 @@ public class Animais : MonoBehaviour
                         if (SpeedAtual > Speed)
                             SpeedAtual -= 0.1f;
 
-                        if (Vector2.Distance(Player.transform.position, transform.position) < 10)
+                        if (Vector2.Distance(Player.transform.position, transform.position) < 20)
                             State = StateMachine.Atack;
 
                         break;
 
                     case StateMachine.Atack:
 
-                        transform.up = Vector3.Lerp(transform.up, target - (Vector2)transform.position, 10f * Time.deltaTime);
                         target = Player.transform.position;
+                        transform.up = Vector3.Lerp(transform.up, target - (Vector2)transform.position, 10f * Time.deltaTime);
+
 
                         if (SpeedAtual < SpeedShark)
                             SpeedAtual += 0.1f;
@@ -100,9 +101,9 @@ public class Animais : MonoBehaviour
 
                     case StateMachine.Fugir:
 
-
-                        transform.up = Vector3.Lerp(transform.up, (Vector2)transform.position - target, 1 * Time.deltaTime);
                         target = Player.transform.position;
+                        transform.up = Vector3.Lerp(transform.up, (Vector2)transform.position - target, 1 * Time.deltaTime);
+
 
                         if (SpeedAtual > Speed)
                             SpeedAtual -= 0.1f;
@@ -130,7 +131,7 @@ public class Animais : MonoBehaviour
                         if (SpeedAtual > Speed)
                             SpeedAtual -= 0.1f;
 
-                        if (Vector2.Distance(Player.transform.position, transform.position) < 10)
+                        if (Vector2.Distance(Player.transform.position, transform.position) < 20)
                             State = StateMachine.Atack;
 
                         break;

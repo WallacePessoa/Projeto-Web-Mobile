@@ -1,0 +1,2 @@
+C:\Users\Wallace\Documents\GitHub\Projeto-Web-Mobile\Projeto Unity\Projeto Mobile-Web\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\Wallace\Documents\GitHub\Projeto-Web-Mobile\Projeto Unity\Projeto Mobile-Web\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

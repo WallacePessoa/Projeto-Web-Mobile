@@ -68,7 +68,7 @@ public class Spawn : MonoBehaviour
     {
         if(AnimaisVivos.Count != 0 && ReciclaveisAtivos.Count != 0)
         {
-            if ((AnimaisVivos.Count / 2) > ReciclaveisAtivos.Count)
+            if ((AnimaisVivos.Count / 2) >= ReciclaveisAtivos.Count)
             {
                 ReciclaveisAtivos.Add(Instantiate(Reciclaveis[Random.Range(0, Reciclaveis.Length)], new Vector3(Random.Range(-50, 50), Random.Range(-36, 33), 1), transform.rotation));
             }
