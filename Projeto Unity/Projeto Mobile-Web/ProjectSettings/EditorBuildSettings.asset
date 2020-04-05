@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Options.unity
     guid: 18d5dfe18baeb87488cecdfb41a38f1d
   - enabled: 1
-    path: Assets/Scenes/Hanking.unity
+    path: Assets/Scenes/Ranking.unity
     guid: c282022021540d74c8b4c67ebb111799
   m_configObjects: {}
