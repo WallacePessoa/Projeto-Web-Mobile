@@ -7,9 +7,8 @@ public class Player : MonoBehaviour
 {
     float hori;
     float vert;
-    float FloatScore;
+    public static float FloatScore;
     public float ForçaShark;
-
 
     public Text TextScore;
     public Image Painel;

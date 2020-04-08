@@ -9,7 +9,7 @@ public class Spawn : MonoBehaviour
     public GameObject[] Reciclaveis;
 
     public List<GameObject> ReciclaveisAtivos = new List<GameObject>();
-    public List<GameObject> AnimaisVivos = new List<GameObject>();
+    public static List<GameObject> AnimaisVivos = new List<GameObject>();
 
     public Text Lixo;
     public Image PainelVitoria;

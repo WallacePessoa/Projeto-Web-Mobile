@@ -60,12 +60,16 @@ public class GameManager : MonoBehaviour
 
             Time.timeScale = 1;
         }
+        else
+        {
+            Conversa.text = Textos[auxTexto];
+            auxTexto++;
+            print(auxTexto);
 
-        Conversa.text = Textos[auxTexto];
-        auxTexto++;
-        print(auxTexto);
+            TextButon.gameObject.SetActive(true);
+        }
 
-        TextButon.gameObject.SetActive(true);
+
         
 
 

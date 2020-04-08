@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1552593992849405245}
   - component: {fileID: -7759717952982778488}
   - component: {fileID: 1976272832242278257}
+  - component: {fileID: 797109896173843525}
   m_Layer: 0
   m_Name: Tartaruga
   m_TagString: Animal
@@ -144,6 +145,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  SpeedShark: 0
+  SpeedBaleia: 0
   target: {x: 0, y: 0}
   Nodes: []
-  Estado: 0
+  State: 0
+  animal: 0
+--- !u!95 &797109896173843525
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552593992849405246}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91779c8544b832c4b8fc99edb8ec0cce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

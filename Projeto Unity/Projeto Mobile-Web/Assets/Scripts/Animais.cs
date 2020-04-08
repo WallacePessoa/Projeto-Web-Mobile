@@ -12,10 +12,13 @@ public class Animais : MonoBehaviour
     public Transform[] Nodes;
 
     float SpeedAtual;
+    float contador = 0;
 
     Rigidbody2D rb;
 
     GameObject Player;
+
+    Collider2D col;
 
     public enum StateMachine
     {
@@ -40,9 +43,12 @@ public class Animais : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
         Player = GameObject.Find("Player");
         SpeedAtual = Speed;
         target = (Vector2)transform.position - new Vector2(Random.Range(-5, 5), Random.Range(-5, 5));
+
+
     }
 
     // Update is called once per frame
@@ -52,12 +58,50 @@ public class Animais : MonoBehaviour
         {
             case Animal.Tartaruga:
 
-                transform.up = Vector3.Lerp(transform.up, target - (Vector2)transform.position, 1 * Time.deltaTime);
+                if(contador < 2f)
+                {
+                    col.enabled = false;
+                    contador += Time.deltaTime;
+                }else
+                    col.enabled = true;
 
-                if (Vector2.Distance(transform.position, target) < 2f)
-                    target = new Vector2(Random.Range(-50, 50), Random.Range(-36, 32));
+                switch (State)
+                {
 
-                rb.velocity = transform.up * Speed;
+                    case StateMachine.Nadar:
+
+                        transform.up = Vector3.Lerp(transform.up, target - (Vector2)transform.position, 1 * Time.deltaTime);
+
+                        if (Vector2.Distance(transform.position, target) < 2f)
+                            target = new Vector2(Random.Range(-50, 50), Random.Range(-36, 32));
+
+                        rb.velocity = transform.up * Speed;
+
+                        if(Vector2.Distance(transform.position, Player.transform.position) < 10)
+                        {
+                            State = StateMachine.Fugir;
+                        }
+
+                        break;
+
+                    case StateMachine.Fugir:
+
+                        target = Player.transform.position;
+                        transform.up = Vector3.Lerp(transform.up, (Vector2)transform.position - target, 1 * Time.deltaTime);
+
+
+                        if (SpeedAtual > Speed)
+                            SpeedAtual -= 0.1f;
+
+                        if(Vector2.Distance(transform.position, Player.transform.position) > 15)
+                        {
+                            State = StateMachine.Nadar;
+                        }
+
+                        rb.velocity = transform.up * SpeedAtual;
+
+                        break;
+                }
 
                 break;
 
@@ -183,7 +227,7 @@ public class Animais : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             State = StateMachine.Fugir;
-            print("aaaaaa");
+
 
             yield return new WaitForSeconds(7f);
 
