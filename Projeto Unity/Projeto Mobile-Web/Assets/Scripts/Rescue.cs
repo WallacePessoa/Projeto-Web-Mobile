@@ -25,7 +25,7 @@ public class Rescue : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             print("aaa");
-            Spawn.AnimaisVivos.Add(Instantiate(Animal, transform.position, transform.rotation));
+            Spawn.AnimaisVivos.Add(Instantiate(Animal, new Vector2(transform.position.x + 3.5f, transform.position.y), transform.rotation));
             Player.FloatScore++;
             Destroy(gameObject);
         }

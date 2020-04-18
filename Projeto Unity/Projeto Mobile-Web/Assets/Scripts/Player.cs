@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Player : MonoBehaviour
 {
     float hori;
     float vert;
+
+    public Joystick Joystick;
+
     public static float FloatScore;
     public float ForçaShark;
 
@@ -50,13 +54,15 @@ public class Player : MonoBehaviour
         }
         else
         {
-            rb.velocity = transform.up * vert * speed;
+
+            rb.velocity = new Vector2(Joystick.Horizontal, Joystick.Vertical) * speed;
+            transform.up = rb.velocity;
+
+            //rb.transform.Rotate(new Vector3(0, 0, -hori)* speedRotation);
         }
 
-        rb.transform.Rotate(new Vector3(0, 0, -hori)* speedRotation);
 
 
-       
     }
 
 
