@@ -33,12 +33,12 @@ public class Spawn : MonoBehaviour
             StopAllCoroutines();
         }
 
-        if(AnimaisVivos.Count/4 > ReciclaveisAtivos.Count)
+        if(AnimaisVivos.Count/4 > ReciclaveisAtivos.Count && Contagem < 2)
         {
             Time.timeScale = 0;
             PainelVitoria.gameObject.SetActive(true);
             Back.gameObject.SetActive(true);
-        }else if(AnimaisVivos.Count < ReciclaveisAtivos.Count/4)
+        }else if(AnimaisVivos.Count < ReciclaveisAtivos.Count/4 && Contagem < 2)
         {
             Time.timeScale = 0;
             Back.gameObject.SetActive(true);
@@ -110,7 +110,7 @@ public class Spawn : MonoBehaviour
 
     private IEnumerator Spawnar()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         Contagem -= 0.5f;
         StartCoroutine(Spawnar());
     }

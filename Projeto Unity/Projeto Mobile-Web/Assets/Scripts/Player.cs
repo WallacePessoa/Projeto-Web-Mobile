@@ -17,10 +17,17 @@ public class Player : MonoBehaviour
     public Text TextScore;
     public Image Painel;
     public Text TextReturn;
+    public Text TextReciclaveis;
 
+    public bool bollNadar;
+    public bool bollMobile;
 
+    public float NadarSpeed;
     public float speed;
     public float speedRotation;
+
+    bool Nadando;
+    bool MobileOrPc = false;
 
 
     Rigidbody2D rb;
@@ -28,6 +35,7 @@ public class Player : MonoBehaviour
     SpriteRenderer sprite;
 
     int aux = 0;
+    public static int RConsumiveis = 0;
 
     Vector2 Colisão;
     bool colidiu = false;
@@ -36,6 +44,11 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+
+        if (bollMobile)
+            StartCoroutine(Mobile());
+        else
+            StartCoroutine(PC());
 
     }
 
@@ -51,17 +64,95 @@ public class Player : MonoBehaviour
             rb.AddForce(Colisão.normalized * ForçaShark);
             if (hori != 0 || vert != 0)
                 colidiu = false;
+            MobileOrPc = true;
         }
         else
         {
+            if (bollMobile && MobileOrPc)
+            {
+                StartCoroutine(Mobile());
+                MobileOrPc = false;
+            }
+            else if(!bollMobile && MobileOrPc)
+            {
+                StartCoroutine(PC());
+                MobileOrPc = false;
+            }
 
+            if (bollMobile)
+            {
+                transform.up = rb.velocity;
+            }
+
+
+        }
+
+        TextReciclaveis.text = "collected recyclables: " + RConsumiveis.ToString();
+
+    }
+
+    public IEnumerator Mobile()
+    {
+        if (bollNadar)
+        {
+            rb.drag = 4f;
+            NadarSpeed = 300;
+            if (Input.touchCount > 1 && !Nadando)
+            {
+                Nadando = true;
+                rb.AddForce(new Vector2(Joystick.Horizontal, Joystick.Vertical) * NadarSpeed);
+
+
+            }
+            else
+            {
+                Nadando = false;
+
+                yield return new WaitForSeconds(0.01f);
+            }
+        }
+        else
+        {
+            rb.drag = 10f;
+            print("aqui");
             rb.velocity = new Vector2(Joystick.Horizontal, Joystick.Vertical) * speed;
             transform.up = rb.velocity;
+        }
+        yield return null;
+        StartCoroutine(Mobile());
+    }
 
-            //rb.transform.Rotate(new Vector3(0, 0, -hori)* speedRotation);
+    public IEnumerator PC()
+    {
+
+        if (bollNadar)
+        {
+            rb.drag = 4f;
+            NadarSpeed = 1000;
+            if (Input.GetKey(KeyCode.P) && !Nadando)
+            {
+                Nadando = true;
+                rb.AddForce(transform.up * NadarSpeed);
+            }
+            else
+            {
+                Nadando = false;
+                yield return new WaitForSeconds(0.1f);
+            }
+
+        }
+        else
+        {
+            rb.drag = 10f;
+            rb.velocity = transform.up * vert * speed;
         }
 
 
+        rb.transform.Rotate(new Vector3(0, 0, -hori) * speedRotation);
+
+
+        yield return null;
+        StartCoroutine(PC());
 
     }
 
@@ -73,6 +164,7 @@ public class Player : MonoBehaviour
         {
             FloatScore++;
             TextScore.text = "Score: " + FloatScore.ToString();
+            RConsumiveis += Random.Range(1, 5);
             Destroy(collision.gameObject);
         }
 
