@@ -105,6 +105,60 @@ public class Animais : MonoBehaviour
 
                 break;
 
+
+
+            case Animal.Peixe:
+
+                if (contador < 2f)
+                {
+                    col.enabled = false;
+                    contador += Time.deltaTime;
+                }
+                else
+                    col.enabled = true;
+
+
+                switch (State)
+                {
+
+                    case StateMachine.Nadar:
+
+                        transform.up = Vector3.Lerp(transform.up, target - (Vector2)transform.position, 1 * Time.deltaTime);
+
+                        if (Vector2.Distance(transform.position, target) < 2f)
+                            target = new Vector2(Random.Range(-50, 50), Random.Range(-36, 32));
+
+                        rb.velocity = transform.up * Speed;
+
+                        if (Vector2.Distance(transform.position, Player.transform.position) < 10)
+                        {
+                            State = StateMachine.Fugir;
+                        }
+
+                        break;
+
+                    case StateMachine.Fugir:
+
+                        target = Player.transform.position;
+                        transform.up = Vector3.Lerp(transform.up, (Vector2)transform.position - target, 1 * Time.deltaTime);
+
+
+                        if (SpeedAtual > Speed)
+                            SpeedAtual -= 0.1f;
+
+                        if (Vector2.Distance(transform.position, Player.transform.position) > 15)
+                        {
+                            State = StateMachine.Nadar;
+                        }
+
+                        rb.velocity = transform.up * SpeedAtual;
+
+                        break;
+                }
+
+
+                break;
+
             case Animal.Tubarão:
 
 

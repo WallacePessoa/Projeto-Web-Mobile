@@ -19,8 +19,8 @@ public class Player : MonoBehaviour
     public Text TextReturn;
     public Text TextReciclaveis;
 
-    public bool bollNadar;
-    public bool bollMobile;
+    public bool boolNadar;
+    public bool boolMobile;
 
     public float NadarSpeed;
     public float speed;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        if (bollMobile)
+        if (boolMobile)
             StartCoroutine(Mobile());
         else
             StartCoroutine(PC());
@@ -68,18 +68,19 @@ public class Player : MonoBehaviour
         }
         else
         {
-            if (bollMobile && MobileOrPc)
+            if (boolMobile && MobileOrPc)
             {
                 StartCoroutine(Mobile());
                 MobileOrPc = false;
             }
-            else if(!bollMobile && MobileOrPc)
+            else if(!boolMobile && MobileOrPc)
             {
+                print("Passou por aqui");
                 StartCoroutine(PC());
                 MobileOrPc = false;
             }
 
-            if (bollMobile)
+            if (boolMobile)
             {
                 transform.up = rb.velocity;
             }
@@ -93,7 +94,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator Mobile()
     {
-        if (bollNadar)
+        if (boolNadar)
         {
             rb.drag = 4f;
             NadarSpeed = 300;
@@ -124,8 +125,9 @@ public class Player : MonoBehaviour
 
     public IEnumerator PC()
     {
+        print("Passou por aqui PC");
 
-        if (bollNadar)
+        if (boolNadar)
         {
             rb.drag = 4f;
             NadarSpeed = 1000;
@@ -143,6 +145,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            print("Passou por aqui !Nadar");
             rb.drag = 10f;
             rb.velocity = transform.up * vert * speed;
         }
