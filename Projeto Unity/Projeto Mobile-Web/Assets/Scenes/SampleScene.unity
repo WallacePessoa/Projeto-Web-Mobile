@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.081043735, g: 0.07889821, b: 0.084905684, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   TextReturn: {fileID: 198140141}
   TextReciclaveis: {fileID: 1338098953}
   boolNadar: 0
-  boolMobile: 0
+  boolMobile: 1
   NadarSpeed: 300
   speed: 15
   speedRotation: 5
@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07341199, g: 0.07226771, b: 0.0754717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2597,7 +2597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07341199, g: 0.07226771, b: 0.0754717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3737,7 +3737,7 @@ PrefabInstance:
     - target: {fileID: 340174855588094876, guid: bc498c31f2aa6a64899d7c970766d9f9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc498c31f2aa6a64899d7c970766d9f9, type: 3}
@@ -3756,7 +3756,7 @@ PrefabInstance:
     - target: {fileID: 4031862245310529670, guid: c7058041e208ced429426ced8ce9fdf6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4031862245310529693, guid: c7058041e208ced429426ced8ce9fdf6,
         type: 3}
