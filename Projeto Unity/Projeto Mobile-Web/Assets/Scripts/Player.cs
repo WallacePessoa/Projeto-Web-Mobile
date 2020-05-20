@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
 
     public Joystick Joystick;
 
-    public static float FloatScore;
+    public static int FloatScore;
+    public static GameObject ColetDestroy;
     public float ForçaShark;
 
     public Text TextScore;
@@ -168,6 +169,7 @@ public class Player : MonoBehaviour
             FloatScore++;
             TextScore.text = "Score: " + FloatScore.ToString();
             RConsumiveis += Random.Range(1, 5);
+            ColetDestroy = collision.gameObject;
             Destroy(collision.gameObject);
         }
 

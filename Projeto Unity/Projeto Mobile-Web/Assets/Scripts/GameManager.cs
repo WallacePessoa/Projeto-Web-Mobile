@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Image Painel;
     public string[] Textos;
     public Text TextButon;
-
+    public Rank rank;
 
     int auxTexto = 0;
 
@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string cena)
     {
+
+        rank.Score.Add(Player.FloatScore);
         SceneManager.LoadScene(cena);
         
     }

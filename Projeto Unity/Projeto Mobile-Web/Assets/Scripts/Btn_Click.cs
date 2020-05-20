@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Btn_Click : MonoBehaviour {
 
+    public GameObject Painel;
     public Image fadeOut;
     Button btn;
 
@@ -25,11 +26,14 @@ public class Btn_Click : MonoBehaviour {
         Scene = scene1;
         Invoke("Click",0f);
         StartCoroutine(enumerator());
+
     }
 
     public IEnumerator enumerator()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        Painel.SetActive(true);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(Scene);
     }
 }

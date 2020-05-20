@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Spawn : MonoBehaviour
 {
     public GameObject[] Animais;
+    public GameObject Regate;
     public GameObject[] Reciclaveis;
 
     public List<GameObject> ReciclaveisAtivos = new List<GameObject>();
@@ -17,7 +18,6 @@ public class Spawn : MonoBehaviour
     public Button Back;
 
     public float Contagem;
-
 
     void Start()
     {
@@ -38,22 +38,30 @@ public class Spawn : MonoBehaviour
             Time.timeScale = 0;
             PainelVitoria.gameObject.SetActive(true);
             Back.gameObject.SetActive(true);
+
         }else if(AnimaisVivos.Count < ReciclaveisAtivos.Count/4 && Contagem < 2)
         {
+
             Time.timeScale = 0;
             Back.gameObject.SetActive(true);
             PainelDerrota.gameObject.SetActive(true);
+
         }
 
         Lixo.text = "Recicláveis: " + ReciclaveisAtivos.Count.ToString();
 
-        foreach(GameObject game in ReciclaveisAtivos)
+        if (ReciclaveisAtivos.Contains(Player.ColetDestroy))
         {
-            if(game == null)
-            {
-                ReciclaveisAtivos.Remove(game);
-            }
+            ReciclaveisAtivos.Remove(Player.ColetDestroy);
         }
+
+        //foreach(GameObject game in ReciclaveisAtivos)
+        //{
+        //    if(game == null)
+        //    {
+        //        ReciclaveisAtivos.Remove(game);
+        //    }
+        //}
 
         foreach (GameObject game in AnimaisVivos)
         {
@@ -112,6 +120,12 @@ public class Spawn : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         Contagem -= 0.5f;
+
+        if(Random.Range(0,2) == 0)
+        {
+            Instantiate(Regate, new Vector3(Random.Range(-50, 50), Random.Range(-36, 33), 1), transform.rotation);
+        }
+
         StartCoroutine(Spawnar());
     }
 }
