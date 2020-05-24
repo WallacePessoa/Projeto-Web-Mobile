@@ -9,6 +9,8 @@ TagManager:
   - "Tubar\xE3o"
   - Block
   - Baleia
+  - FX
+  - Music
   layers:
   - Default
   - TransparentFX

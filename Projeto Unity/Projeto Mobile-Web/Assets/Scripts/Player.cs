@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
 
         }
 
-        TextReciclaveis.text = "collected recyclables: " + RConsumiveis.ToString();
+        TextReciclaveis.text = "Collected: " + RConsumiveis.ToString();
 
     }
 

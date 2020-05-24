@@ -13,7 +13,16 @@ EditorBuildSettings:
     guid: 824587a737aa0754fb3e2b758b5e46f3
   - enabled: 1
     path: Assets/Scenes/Options.unity
+    guid: 2780faaf973540149839b4447216f354
+  - enabled: 1
+    path: Assets/Scenes/Volum.unity
     guid: 18d5dfe18baeb87488cecdfb41a38f1d
+  - enabled: 1
+    path: Assets/Scenes/Screen.unity
+    guid: 0e4c4bd0f1d653348882071844aae932
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: dcd5bd17044dfc947b4a7491746ef4c5
   - enabled: 1
     path: Assets/Scenes/Ranking.unity
     guid: c282022021540d74c8b4c67ebb111799
