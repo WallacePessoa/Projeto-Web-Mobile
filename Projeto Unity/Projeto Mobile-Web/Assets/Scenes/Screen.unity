@@ -875,9 +875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Back
-
-'
+  m_Text: Voltar
 --- !u!222 &165827283
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1047,7 +1045,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: "Op\xE7\xF5es"
 --- !u!222 &370808617
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: "Op\xE7\xF5es"
 --- !u!222 &312403174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -232,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 74.374985, y: 53.70001}
-  m_SizeDelta: {x: 150.75, y: 107.4}
+  m_AnchoredPosition: {x: 99.05998, y: 53.70001}
+  m_SizeDelta: {x: 200.12, y: 107.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510313685
 MonoBehaviour:
@@ -266,7 +266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Jogar
 --- !u!222 &510313686
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1177,7 +1177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ocean Survivor
+  m_Text: Salve o Oceano
 --- !u!222 &1885263147
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1419,8 +1419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37656254, y: 0.3666667}
   m_AnchorMax: {x: 0.37656254, y: 0.3666667}
-  m_AnchoredPosition: {x: 98, y: 26}
-  m_SizeDelta: {x: 149.75, y: 107.4}
+  m_AnchoredPosition: {x: 98, y: 27.4}
+  m_SizeDelta: {x: 199.12, y: 104.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002141476
 MonoBehaviour:

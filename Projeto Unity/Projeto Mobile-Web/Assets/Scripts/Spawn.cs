@@ -48,7 +48,7 @@ public class Spawn : MonoBehaviour
 
         }
 
-        Lixo.text = "Recyclable: " + ReciclaveisAtivos.Count.ToString();
+        Lixo.text = "Recicláveis: " + ReciclaveisAtivos.Count.ToString();
 
         if (ReciclaveisAtivos.Contains(Player.ColetDestroy))
         {

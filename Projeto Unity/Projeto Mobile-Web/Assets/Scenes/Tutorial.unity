@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -333,8 +333,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\rCollect the garbage scattered around the map to earn points and get
-    recyclable"
+  m_Text: Colete o lixo espalhado pelo mapa para ganhar pontos e ser reciclado
 --- !u!222 &126702818
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -961,7 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -979,8 +978,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Be careful not to touch the animals scattered around the map, as some of
-    them will make you lose points
+  m_Text: "Cuidado para n\xE3o tocar nos animais espalhados pelo mapa, pois alguns
+    deles far\xE3o voc\xEA perder pontos"
 --- !u!222 &484366158
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1039,7 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1057,7 +1056,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\rWith 10 recyclables you can free the turtles stuck in the trash"
+  m_Text: "\rCom 10 recicl\xE1veis, voc\xEA pode libertar as tartarugas presas no
+    lixo"
 --- !u!222 &493149279
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1277,7 +1277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Movement control and player speed
+  m_Text: "Controle de movimento e velocidade do jogador\r"
 --- !u!222 &732715323
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2097,9 +2097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Back
-
-'
+  m_Text: Voltar
 --- !u!222 &1146617165
 CanvasRenderer:
   m_ObjectHideFlags: 0

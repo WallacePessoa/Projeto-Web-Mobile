@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
 
         }
 
-        TextReciclaveis.text = "Collected: " + RConsumiveis.ToString();
+        TextReciclaveis.text = "Coletado: " + RConsumiveis.ToString();
 
     }
 
@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Coletavel"))
         {
             FloatScore++;
-            TextScore.text = "Score: " + FloatScore.ToString();
+            TextScore.text = "Pontuação: " + FloatScore.ToString();
             RConsumiveis += Random.Range(1, 5);
             ColetDestroy = collision.gameObject;
             Destroy(collision.gameObject);

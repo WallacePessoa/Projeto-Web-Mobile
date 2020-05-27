@@ -363,7 +363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: "Op\xE7\xF5es"
 --- !u!222 &305141582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Screen
+  m_Text: Tela
 --- !u!222 &1137270546
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1234,7 +1234,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Volum
+  m_Text: Volume
 --- !u!222 &1139879641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1635,9 +1635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Back
-
-'
+  m_Text: Voltar
 --- !u!222 &1520298924
 CanvasRenderer:
   m_ObjectHideFlags: 0

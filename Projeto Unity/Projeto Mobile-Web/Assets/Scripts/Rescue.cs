@@ -36,7 +36,7 @@ public class Rescue : MonoBehaviour
             else
             {
                 Painel.SetActive(true);
-                Text.text = "You need to collect " + (10 - Player.RConsumiveis) + " recyclables to save the animal " + Animal.name;
+                Text.text = "Você precisa coletar " + (10 - Player.RConsumiveis) + " recicláveis para salvar a tartaruga " + Animal.name;
                 yield return new WaitForSeconds(2f);
                 Painel.SetActive(false);
             }

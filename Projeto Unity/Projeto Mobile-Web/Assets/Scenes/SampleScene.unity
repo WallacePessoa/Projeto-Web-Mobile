@@ -702,7 +702,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You have been swallowed!
+  m_Text: "Voc\xEA foi engolido!"
 --- !u!222 &198140142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: "Pontua\xE7\xE3o: 0"
 --- !u!222 &220372272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -936,9 +936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Back
-
-'
+  m_Text: Voltar
 --- !u!222 &264940635
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -997,7 +995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.084905684, g: 0.082102194, b: 0.082102194, a: 1}
+  m_Color: {r: 0.066037714, g: 0.06385723, b: 0.06385723, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1015,7 +1013,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press
+  m_Text: "Avan\xE7ar"
 --- !u!222 &280947017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1523,9 +1521,9 @@ MonoBehaviour:
   Conversa: {fileID: 1456660008}
   Painel: {fileID: 615697748}
   Textos:
-  - Hello, I'm PIOS.
-  - ' I need your help to save the ocean.'
-  - ' Collect all the garbage scattered across the ocean and watch out for animals.'
+  - "Ol\xE1, eu sou o Pios."
+  - Preciso da sua ajuda para salvar o oceano.
+  - Colete todo o lixo espalhado pelo oceano e cuidado com os animais.
   TextButon: {fileID: 280947016}
   rank: {fileID: 11400000, guid: ba5921d67c7d03344ad78b9f04e61c9f, type: 2}
 --- !u!1 &561953859
@@ -2264,7 +2262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back
+  m_Text: Voltar
 --- !u!222 &824085568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2422,7 +2420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Fail!
+  m_Text: "Voc\xEA perdeul!"
 --- !u!222 &866206627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8090,7 +8088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 257, y: 20}
+  m_AnchoredPosition: {x: 276, y: 20}
   m_SizeDelta: {x: 347.6, y: 137.0055}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1173497287
@@ -8124,7 +8122,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Recyclable
+  m_Text: "Recicl\xE1vel"
 --- !u!222 &1173497288
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8500,7 +8498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 508, y: 20}
+  m_AnchoredPosition: {x: 495, y: 20}
   m_SizeDelta: {x: 347.6, y: 137.0055}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1338098953
@@ -8534,7 +8532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coleted
+  m_Text: Coletado
 --- !u!222 &1338098954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8850,7 +8848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13086952, g: 0.07186719, b: 0.8018868, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8945,7 +8943,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Win!
+  m_Text: "Voc\xEA venceu!"
 --- !u!222 &1465180552
 CanvasRenderer:
   m_ObjectHideFlags: 0

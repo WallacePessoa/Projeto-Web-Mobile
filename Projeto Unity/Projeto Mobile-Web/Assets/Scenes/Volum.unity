@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13086952, g: 0.07186719, b: 0.8018868, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -736,7 +736,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Master
+  m_Text: Geral
 --- !u!222 &411500271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1449,7 +1449,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Volum
+  m_Text: Volume
 --- !u!222 &1183837970
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13086952, g: 0.07186719, b: 0.8018868, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1928,9 +1928,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Music
-
-'
+  m_Text: "M\xFAsica"
 --- !u!222 &1366481152
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1989,7 +1987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13086952, g: 0.07186719, b: 0.8018868, a: 1}
+  m_Color: {r: 0.084627606, g: 0.3207547, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2007,9 +2005,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'FX
-
-'
+  m_Text: Efeito sonoro
 --- !u!222 &1461927350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2367,9 +2363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Back
-
-'
+  m_Text: Voltar
 --- !u!222 &1673058898
 CanvasRenderer:
   m_ObjectHideFlags: 0
